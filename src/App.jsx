@@ -18,8 +18,6 @@ function App() {
     <Router>
       <MainNavigation />
       <main>
-
-      
       <Routes >
         <Route path="/" element={<Users/>}  />
         <Route path="/places/new" element={<NewPlaces />} />
