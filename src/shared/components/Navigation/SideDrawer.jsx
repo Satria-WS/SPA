@@ -1,9 +1,9 @@
 import "./Css/SideDrawer.css"
 
 
-const SideDrawer = () => {
+const SideDrawer = ({children}) => {
   return (
-    <div>SideDrawer</div>
+    <aside className="side-drawer">{children}</aside>
   )
 }
 export default SideDrawer
