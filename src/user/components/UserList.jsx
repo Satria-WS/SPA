@@ -1,6 +1,6 @@
 import React from "react";
 import "./UserList.css";
-import  UserItem  from "./UserItem";
+import UserItem from "./UserItem";
 
 const dummerUserItem = [
   { id: "1", name: "dragon", image: "dragonImage", places: "mars" },
@@ -9,19 +9,18 @@ const dummerUserItem = [
 ];
 
 const UserList = ({ item }) => {
-  // if (item.length === 0) {
-    if (false) {
-  
+  if (item.length === 0) {
+  // if (false) {
     return (
       <div className="center">
-        <h2>No users found</h2>
+        <h2>No users Tangina mo</h2>
       </div>
     );
   }
-  //props = image , name , placeCount
+
   return (
-    <ul>
-      {dummerUserItem.map((user, id) => (
+    <ul className="users-list">
+      {item.map((user, id) => (
         <UserItem
           key={id}
           id={id}

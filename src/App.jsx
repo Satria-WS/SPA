@@ -18,7 +18,7 @@ function App() {
       <Routes >
         <Route path="/" element={<Users/>}  />
         <Route path="/places/new" element={<NewPlaces />} />
-         <Route path="/user/UserList" element={<UserList/>}  />
+         <Route path="/user/new" element={<Users/>}  />
         <Route path="*" element={<Navigate to="/"/>} />
       </Routes>
     </Router>
