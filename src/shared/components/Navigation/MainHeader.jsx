@@ -1,6 +1,8 @@
-const MainHeader = () => {
+import "./Css/MainHeader.css"
+
+const MainHeader = ({children}) => {
   return (
-    <div>MainHeader</div>
+    <header className="main-header">{children}</header>
   )
 }
 export default MainHeader
