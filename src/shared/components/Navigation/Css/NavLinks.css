@@ -73,6 +73,7 @@
   .nav-links button:active {
     background: #f8df00;
     color: #292929;
+    /* color: #292929; */
   }
 }
 
