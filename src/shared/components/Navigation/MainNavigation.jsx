@@ -11,11 +11,11 @@ const MainNavigation = () => {
 
   
   
-  const openDrawer = () => {
+  const openDrawerHandler = () => {
     setdrawerIsOpen(true);
   }
 
-  const closeDrawer = () => {
+  const closeDrawerHandler = () => {
     const setdrawerIsClose = setdrawerIsOpen(false);
     return setdrawerIsClose;
   }
@@ -25,14 +25,20 @@ const MainNavigation = () => {
   return (
     // 
     <React.Fragment>
-      {drawerIsOpen && <Backdrop onClick={closeDrawer}/>}  {/* <---- i didnknow this fking logic */}
-      {drawerIsOpen && <SideDrawer>
+      {drawerIsOpen && <Backdrop onClick={closeDrawerHandler}/>}  {/* <---- i didnknow this fking logic */}
+      {/* {drawerIsOpen && <SideDrawer>
         <nav className="main-navigation__drawer-nav">
           <NavLinks />
         </nav>
-      </SideDrawer> }
+      </SideDrawer> } */}
+      <SideDrawer show={drawerIsOpen} onClick={closeDrawerHandler}>
+        <nav className="main-navigation__drawer-nav">
+          <NavLinks />
+        </nav>
+      </SideDrawer> 
+
       <MainHeader>
-        <button className="main-navigation__menu-btn" onClick={openDrawer}>
+        <button className="main-navigation__menu-btn" onClick={openDrawerHandler}>
           <span />
           <span />
           <span />
