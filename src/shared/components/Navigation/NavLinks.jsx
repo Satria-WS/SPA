@@ -15,6 +15,7 @@ const NavLinks = () => {
       <li>
         <NavLink to="/auth">AUTHENTICATE</NavLink>
       </li>
+      
     </ul>
   );
 };
