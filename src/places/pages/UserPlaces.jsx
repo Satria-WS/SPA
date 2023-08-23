@@ -1,5 +1,6 @@
 import React from "react";
 import PlaceList from "../components/PlaceList";
+import { useParams } from "react-router-dom";
 
 const DUMMY_PLACES = [
   {
@@ -18,7 +19,7 @@ const DUMMY_PLACES = [
     id: "2",
     title: "Eiffel Tower",
     description: "Iconic Parisian landmark",
-    imageUrl: "Paris",
+    imageUrl: "http://surl.li/gzynw",
     address: "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France",
     location: {
       lat: 48.8588443,
@@ -30,7 +31,7 @@ const DUMMY_PLACES = [
     id: "3",
     title: "Statue of Liberty",
     description: "Symbol of freedom in the USA",
-    imageUrl: "New York",
+    imageUrl: "http://surl.li/kizbp",
     address: "Liberty Island, New York, NY 10004, USA",
     location: {
       lat: 40.689247,
@@ -41,7 +42,9 @@ const DUMMY_PLACES = [
 ];
 
 const UserPlaces = () => {
-  return <PlaceList items={DUMMY_PLACES} />;
+  const userId = useParams().userId;
+  const loadedPlaces = DUMMY_PLACES.filter(place => place.creatorId === userId)
+  return <PlaceList items={loadedPlaces}  />;
 };
 export default UserPlaces;
 
