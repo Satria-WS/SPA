@@ -9,8 +9,10 @@ import {
 import Users from "./user/pages/Users";
 import NewPlaces from "./places/pages/NewPlaces";
 import UserList from "./user/components/UserList";
-import UserItem from "./user/components/UserItem"
+import UserItem from "./user/components/UserItem";
+import UserPlaces from "./places/pages/UserPlaces";
 import MainNavigation from "./shared/components/Navigation/MainNavigation";
+
 //  <Route path="/" element={<Home />} />
 
 function App() {
@@ -18,14 +20,15 @@ function App() {
     <Router>
       <MainNavigation />
       <main>
-      <Routes >
-        <Route path="/" element={<Users/>}  />
-        <Route path="/places/new" element={<NewPlaces />} />
-        <Route path="/user/new" element={<Users />} />
-        {/* <Route path="/Navigation/new" element={<MainNavigation/>}  /> */}
-        <Route path="*" element={<Navigate to="/"/>} />
+        <Routes>
+          <Route path="/" element={<Users />} />
+          <Route path="/places/new" element={<NewPlaces />} />
+          <Route path="/:userId/places" element={<UserPlaces />} />
+          <Route path="/user/new" element={<Users />} />
+          {/* <Route path="/Navigation/new" element={<MainNavigation/>}  /> */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        </main>
+      </main>
     </Router>
   );
 }
