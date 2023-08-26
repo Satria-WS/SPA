@@ -2,11 +2,11 @@ import React from "react";
 import "./UserList.css";
 import UserItem from "./UserItem";
 
-const dummerUserItem = [
-  { id: "1", name: "dragon", image: "dragonImage", places: "mars" },
-  { id: "1", name: "rabbit", image: "rabbitImage", places: "Jupiter" },
-  { id: "1", name: "Ant", image: "AntImage", places: "Moon" },
-];
+// const dummerUserItem = [
+//   { id: "1", name: "dragon", image: "dragonImage", places: "mars" },
+//   { id: "1", name: "rabbit", image: "rabbitImage", places: "Jupiter" },
+//   { id: "1", name: "Ant", image: "AntImage", places: "Moon" },
+// ];
 
 const UserList = ({ item }) => {
   if (item.length === 0) {

@@ -6,10 +6,14 @@ import PlaceItem from "./PlaceItem";
 const PlaceList = ({ items }) => {
   if (items.length === 0) {
     return (
-      <div className="place-list center">
-        <h2>No place found. Maybe create one ?</h2>
-        <button> Share place</button>
-      </div>
+      <>
+        <div className="place-list center">
+          <h2>No place found. Maybe create one ?</h2>
+        </div>
+        <div className="place-list center">
+          <button> Share place</button>
+        </div>
+      </>
     );
   }
 
@@ -24,7 +28,7 @@ const PlaceList = ({ items }) => {
           description={place.description}
           address={place.address}
           creatorId={place.creator}
-          coordinates={place.location} 
+          coordinates={place.location}
         />
       ))}
     </ul>
