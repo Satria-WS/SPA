@@ -1,7 +1,7 @@
-import React from "react";
-import "./css/PlaceItem.css";
+import React , {useState} from "react";
 import Card from "../../shared/components/UIEelement/Card";
 import Button from "../../shared/components/FormElements/Button";
+import "./css/PlaceItem.css";
 
 const PlaceItem = ({
   id,
@@ -12,6 +12,11 @@ const PlaceItem = ({
   creatorId,
   coordinates,
 }) => {
+  const [showMap, setShowMap] = useState(false);
+  
+  const openMapHandler = () => setShowMap(true);
+  const closeMapHandler = () => setShowMap(true);
+  
   return (
     <li className="place-item">
       <Card>
