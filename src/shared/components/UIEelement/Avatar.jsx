@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Avatar.css";
+import "./css/Avatar.css";
 
 const Avatar = ({ className, style, image, alt , width }) => {
   return (
